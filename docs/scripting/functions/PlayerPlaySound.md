@@ -1,46 +1,45 @@
 ---
-title: PlayerPlaySound
-description: Plays the specified sound for a player.
+título: PlayerPlaySound
+descrição: Toca o som especificado para um jogador.
 tags: ["player"]
 ---
 
-## Description
+## descrição
 
-Plays the specified sound for a player.
+Toca o som especificado para um jogador.
 
-For a library that lists all sounds, check out [this](https://github.com/WoutProvost/samp-sound-array).
+Para obter uma biblioteca que lista todos os sons, verifique [this](https://github.com/WoutProvost/samp-sound-array).
 
 | Name     | Description                                                  |
 | -------- | ------------------------------------------------------------ |
-| playerid | The ID of the player for whom to play the sound.             |
-| soundid  | The sound to play.                                           |
-| Float:x  | X coordinate for the sound to play at. (0.0 for no position) |
-| Float:y  | Y coordinate for the sound to play at. (0.0 for no position) |
-| Float:z  | Z coordinate for the sound to play at. (0.0 for no position) |
+| playerid | O ID do jogador para quem tocar o som                        |
+| soundid  | O som a ser reproduzido.                                     |
+| Float:x  | Coordenada X para o som a ser reproduzido.                   |
+| Float:y  | Coordenada X para o som a ser reproduzido.                   |
+| Float:z  | Coordenada X para o som a ser reproduzido.                   |  
 
-## Returns
+## Retornos
 
-1: The function was executed successfully.
+1: A função foi executada com sucesso.
 
-0: The function failed to execute. This means the player is not connected.
-
-## Examples
+0: A função falhou ao executar. Isso significa que o reprodutor não está conectado.
+## Exemplos
 
 ```c
-// player punching sound (fits for commands such as /slap well). The sound will be quiet, as the source is actually 10 meters above the player.
+// psom de soco do jogador (adequado para comandos como /tapa). O som será baixo, pois a fonte está, na verdade, 10 metros acima do reprodutor.
 PlayerPlaySound(playerid, 1130, 0.0, 0.0, 10.0);
 ```
 
-## Notes
+## Notas
 
 :::tip
 
-Only use the coordinates if you want the sound to be played at a certain position. Set coordinates all to 0.0 to just play the sound.
+Use as coordenadas apenas se quiser que o som seja reproduzido em uma determinada posição. Defina todas as coordenadas como 0,0 para apenas reproduzir o som.
 
 :::
 
 ## Related Functions
 
-- [PlayCrimeReportForPlayer](PlayCrimeReportForPlayer): Play a crime report for a player.
-- [PlayAudioStreamForPlayer](PlayAudioStreamForPlayer): Plays a audio stream for a player.
-- [StopAudioStreamForPlayer](StopAudioStreamForPlayer): Stops the current audio stream for a player.
+- [PlayCrimeReportForPlayer](PlayCrimeReportForPlayer): Apresentar um relatório de crime para um jogador.
+- [PlayAudioStreamForPlayer](PlayAudioStreamForPlayer): Reproduz um fluxo de áudio para um jogador.
+- [StopAudioStreamForPlayer](StopAudioStreamForPlayer): Interrompe o fluxo de áudio atual para um jogador.
